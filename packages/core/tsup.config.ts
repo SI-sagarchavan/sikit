@@ -5,13 +5,12 @@ export default defineConfig((options) => ({
   entryPoints: ["src/index.ts"],
   format: ["esm", "iife"],
   dts: true,
-  globalName: "AcmeUI",
+  globalName: "AcmeCore",
   platform: "browser",
   esbuildOptions: (options) => {
-    options.external = ["react", "react-dom", "react/jsx-runtime"];
     options.banner = {
-      js: `/* ${figlet.textSync("SkyDrop UI")} */`
+      js: `/* ${figlet.textSync("SkyDrop Core")} */`
     };
   },
   ...options,
-}));
+})); 

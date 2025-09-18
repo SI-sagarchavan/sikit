@@ -1,5 +1,5 @@
 {
-  "name": "@acme/ui",
+  "name": "@acme/core",
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
@@ -35,10 +35,12 @@
   "peerDependencies": {
     "react": "^19.1.0"
   },
+  "dependencies": {
+    "@acme/ui": "workspace:*",
+    "@acme/cricket": "workspace:*",
+    "figlet": "^1.8.1"
+  },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "figlet": "^1.8.1"
   }
-}
+} 

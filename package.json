@@ -2,7 +2,11 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "build:ui": "turbo run build --filter=@acme/ui",
+    "build:core": "turbo run build --filter=@acme/core",
+    "build:web": "turbo run build --filter=@acme/web",
     "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=@acme/web",
     "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",

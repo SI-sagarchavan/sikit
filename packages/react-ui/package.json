@@ -1,5 +1,5 @@
 {
-  "name": "@acme/ui",
+  "name": "SikitUI",
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
@@ -8,37 +8,39 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "browser": "./dist/index.global.js"
+      "require": "./dist/index.umd.js"
     }
   },
   "main": "./dist/index.js",
-  "unpkg": "./dist/index.global.js",
-  "jsdelivr": "./dist/index.global.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "vite build",
+    "dev": "vite build --watch",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo node_modules dist"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/figlet": "^1.7.0",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
-    "tsup": "^8.0.2",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
   },
   "peerDependencies": {
-    "react": "^19.1.0"
+    "react": "^18.2.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "figlet": "^1.8.1"
   }
 }

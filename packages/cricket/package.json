@@ -1,5 +1,5 @@
 {
-  "name": "@acme/ui",
+  "name": "@acme/cricket",
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
@@ -24,21 +24,21 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "@types/figlet": "^1.7.0",
-    "@types/react": "^18.2.61",
-    "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",
+    "@repo/typescript-config": "workspace:*",
     "tsup": "^8.0.2",
     "typescript": "5.5.4"
   },
   "peerDependencies": {
-    "react": "^19.1.0"
-  },
-  "publishConfig": {
-    "access": "public"
+    "react": "^19.0.0"
   },
   "dependencies": {
     "figlet": "^1.8.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
-}
+} 
