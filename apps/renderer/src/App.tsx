@@ -1,9 +1,9 @@
 const App = () => {
 
-const Button = window.AcmeCore["Button"];
+const Button = window.AcmeCore["MatchStatus"];
 
   return (
-    <Button onClick={() => alert("clicked")}>Click epic</Button>
+    <Button status="won" venue="Mumbai" date="2025-07-07" result="100-100" >Click epic</Button>
   )
 };
 
