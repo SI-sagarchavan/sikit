@@ -6,7 +6,7 @@ export interface ButtonProps
 const Button = ({ children, ...other }: ButtonProps): JSX.Element => {
   return (
     <button type="button" {...other}>
-       rendered from lib{children}
+       {children}
     </button>
   );
 }
