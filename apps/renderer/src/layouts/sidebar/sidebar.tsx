@@ -16,10 +16,14 @@ const Sidebar = () => {
             <h3>Components</h3>
             <ul>
                {Object.values(manifest?.components || {}).map((component: any) => {
+
+                console.log("component", component)
+
                         const handleLoadComponent = () => {
                             const componentData = {
                                 name: component.name,
-                                exports: component.exports
+                                exports: component.exports,
+                                config: component.config
                             }
                             setSelectedComponent(componentData)
                             console.log('Selected component:', componentData)
