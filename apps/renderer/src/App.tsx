@@ -1,9 +1,11 @@
-import { DashboardLayout } from "./layouts/dashboard";
+import { DashboardLayout } from "./layouts/dashboard"
+import { ComponentProvider } from "./contexts/component-context"
 
 const App = () => {
-
   return (
-    <DashboardLayout />
+    <ComponentProvider>
+      <DashboardLayout />
+    </ComponentProvider>
   )
 };
 

@@ -1,4 +1,6 @@
-import { dashboardStyles } from "./dashboard-styles";
+import Sidebar from "../sidebar/sidebar"
+import { Workspace } from "../../components/workspace"
+import { dashboardStyles } from "./dashboard-styles"
 
 const Dashboard = () => {
 
@@ -7,11 +9,11 @@ const Dashboard = () => {
   return (
     <div className={styles.container()}>
       <div className={styles.sidebarContainer()}>
-        <h1 className="Sidebar">Sidebar</h1>
+        <Sidebar />
       </div>
       <div className={styles.mainContainer()}>
-         <div className={styles.workspaceContainer()} >
-        <h1 className="Main">Main</h1>
+         <div className={styles.workspaceContainer()}>
+           <Workspace />
         </div>
       </div>
       <div className={styles.sidebarContainer()}>

@@ -56,7 +56,8 @@ async function getComponentInfo(uiPackagePath) {
               name: componentDir,
               path: `./src/${componentDir}`,
               exports: componentExports,
-              type: 'component'
+              type: 'component',
+              config : `${componentDir}StoryConfig`
             })
           }
         } catch (error) {
