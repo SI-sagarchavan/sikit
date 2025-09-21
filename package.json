@@ -11,7 +11,7 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
-    "version-packages": "changeset version",
+    "version-packages": "changeset version && node .changeset/manifest-update.js",
     "release": "turbo run build --filter=docs^... && changeset publish",
     "preview-storybook": "turbo run preview-storybook"
   },

@@ -7,6 +7,7 @@ export default defineConfig((options) => ({
   dts: true,
   globalName: "AcmeUI",
   platform: "browser",
+  target: "es2020",
   esbuildOptions: (options) => {
     options.external = ["react", "react-dom", "react/jsx-runtime"];
     options.banner = {

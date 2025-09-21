@@ -1,6 +1,6 @@
 {
   "name": "@acme/core",
-  "version": "0.0.0",
+  "version": "2.1.0",
   "sideEffects": false,
   "license": "MIT",
   "type": "module",
@@ -17,8 +17,11 @@
   "jsdelivr": "./dist/index.global.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "npm run generate:manifest && tsup",
+    "dev": "npm run generate:manifest && tsup --watch",
+    "serve": "npx serve dist -p 8081 --cors",
+    "dev:serve": "npm run dev & npm run serve",
+    "generate:manifest": "node scripts/generate-manifest.js",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo node_modules dist"
   },
@@ -37,10 +40,9 @@
   },
   "dependencies": {
     "@acme/ui": "workspace:*",
-    "@acme/cricket": "workspace:*",
     "figlet": "^1.8.1"
   },
   "publishConfig": {
     "access": "public"
   }
-} 
+}

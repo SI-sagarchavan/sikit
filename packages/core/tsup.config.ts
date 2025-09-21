@@ -7,6 +7,7 @@ export default defineConfig((options) => ({
   dts: true,
   globalName: "AcmeCore",
   platform: "browser",
+  target: "es2020",
   esbuildOptions: (options) => {
     options.banner = {
       js: `/* ${figlet.textSync("SkyDrop Core")} */`

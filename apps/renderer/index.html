@@ -4,12 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/src/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/index.css">
     <title>Vite + React + TS</title>
   </head>
   <body>
     <div id="root"></div>
-    <script src="http://192.168.111.2:8081/index.global.js"></script>
+    <script src="http://127.0.0.1:8081/index.global.js"></script>
+    <script>
+      // Test manifest accessibility
+      console.log('🎉 AcmeCore loaded:', !!window.AcmeCore);
+      console.log('📦 Manifest loaded:', !!window.AcmeCore?.manifest);
+      console.log('📊 Manifest data:', window.AcmeCore?.manifest);
+      console.log('🔧 Available components:', Object.keys(window.AcmeCore?.manifest?.components || {}));
+      console.log('🚀 Total components:', window.AcmeCore?.manifest?.totalComponents);
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

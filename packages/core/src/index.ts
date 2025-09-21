@@ -1,5 +1,5 @@
 // Re-export all UI components
 export * from "@acme/ui";
 
-// Re-export all Cricket components  
-export * from "@acme/cricket"; 
+// Export manifest for programmatic access
+export { default as manifest } from "./manifest.json";

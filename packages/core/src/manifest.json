@@ -1,0 +1,71 @@
+{
+  "name": "SkyDrop Core",
+  "version": "2.1.0",
+  "description": "A comprehensive design system core package",
+  "generatedAt": "2025-09-21T04:58:16.953Z",
+  "packages": {
+    "core": {
+      "name": "@acme/core",
+      "version": "2.1.0",
+      "description": "Core package that re-exports UI components"
+    },
+    "ui": {
+      "name": "@acme/ui",
+      "version": "2.1.0",
+      "description": "UI component library"
+    }
+  },
+  "components": {
+    "calendar": {
+      "name": "calendar",
+      "path": "./src/calendar",
+      "exports": [
+        "Calendar"
+      ],
+      "type": "component",
+      "version": "2.1.0"
+    },
+    "button": {
+      "name": "button",
+      "path": "./src/button",
+      "exports": [
+        "Button"
+      ],
+      "type": "component",
+      "version": "2.1.0"
+    },
+    "badge": {
+      "name": "badge",
+      "path": "./src/badge",
+      "exports": [
+        "Badge"
+      ],
+      "type": "component",
+      "version": "2.1.0"
+    }
+  },
+  "dependencies": {
+    "core": {
+      "@acme/ui": "workspace:*",
+      "figlet": "^1.8.1"
+    },
+    "ui": {
+      "date-fns": "^4.1.0",
+      "figlet": "^1.8.1",
+      "react-day-picker": "^9.10.0",
+      "zod": "^4.1.9",
+      "zod-to-json-schema": "^3.24.6"
+    },
+    "peerDependencies": {
+      "react": "^19.1.0",
+      "tailwind-variants": "^3.1.1"
+    }
+  },
+  "totalComponents": 3,
+  "stats": {
+    "totalExports": 3,
+    "componentTypes": {
+      "component": 3
+    }
+  }
+}

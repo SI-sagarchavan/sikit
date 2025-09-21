@@ -11,6 +11,6 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     react({
-    jsxRuntime : "automatic"
+    jsxRuntime : "automatic",
   })],
 })

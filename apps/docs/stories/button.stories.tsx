@@ -34,13 +34,42 @@ export const Primary: Story = {
   ),
   name: "Button",
   args: {
-    children: "Hello",
-    type: "button",
-    style: {
-      color: "blue",
-      border: "1px solid gray",
-      padding: 10,
-      borderRadius: 10,
-    },
+   size: "md",
+   variant: "primary",
+   disabled: true,
+   type: "button",
   },
+  argTypes : {
+    size: {
+      control : "select",
+      options : ["sm", "md", "lg"],
+      description :"The size of the button",
+      name : "szie",
+      type: {
+        name : "string",
+      }
+    },
+    variant: {
+      control : "select",
+      options : ["primary", "secondary", "destructive", "outline", "ghost", "link"],
+    },
+    disabled: {
+      control : "boolean",
+      table:{
+        defaultValue : {
+          summary : "false"
+        },
+        category:"Basic",
+        subcategory : "Disabled",
+        type : {
+          detail : "boolean",
+          summary : "false",
+        }
+      }
+    },
+    type: {
+      control : "select",
+      options : ["button", "submit", "reset"]
+    }
+  }
 };
