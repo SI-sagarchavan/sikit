@@ -9,7 +9,6 @@ const Workspace = () => {
 
   const componentConfig:any = window.AcmeCore[selectedComponent?.config]
 
-
   const meta = {
     component: Component,
   } satisfies Meta<typeof Component>;
@@ -32,7 +31,7 @@ const Workspace = () => {
     const { render: renderComponent, args } = Story
 
   return (
-    <div style={{ padding: '20px', height: '100%' }}>
+    <div className=''>
       {renderComponent && renderComponent(args || {}, {} as any)}
     </div>
   ) 

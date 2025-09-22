@@ -10,14 +10,14 @@ const Sidebar = () => {
     }, [window.AcmeCore]);
 
   return (
-    <div>
-        <h2>{manifest?.name}</h2>
+    <div className="p-4">
         <div>
-            <h3>Components</h3>
-            <ul>
+            <div className="flex justify-between items-center mb-4 py-4">
+            <h3 className="text-lg font-bold">Components</h3>
+            <p>({manifest?.totalComponents})</p>
+            </div>
+            <ul className="space-y-2">
                {Object.values(manifest?.components || {}).map((component: any) => {
-
-
                         const handleLoadComponent = () => {
                             const componentData = {
                                 name: component.name,
@@ -25,13 +25,11 @@ const Sidebar = () => {
                                 config: component.config
                             }
                             setSelectedComponent(componentData)
-                            console.log('Selected component:', componentData)
                         }
-
                     return (
                         <li key={component.name}
                             onClick={handleLoadComponent}
-                            className={selectedComponent?.name === component.name ? 'selected' : ''}
+                            className={`${selectedComponent?.name === component.name ? 'bg-blue-500 text-white' : ''} p-2 rounded-md`}
                         >
                             {component.name}
                         </li>

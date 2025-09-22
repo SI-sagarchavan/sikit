@@ -1,3 +1,6 @@
+import {Switch} from "@heroui/switch";
+import {Select, SelectSection, SelectItem} from "@heroui/react";
+
 import { useComponent } from "../../contexts/component-context";
 
 const ConfigPanel = () => {
@@ -5,32 +8,34 @@ const ConfigPanel = () => {
 
   const componentConfig: any = window.AcmeCore[selectedComponent.config];
 
-  const COMPONENT_MAP: any = {
-    select: "select",
-    boolean: "checkbox",
-  };
+  const renderControlComponent = (argType: any) => {
+
+    console.log(argType);
+
+    switch (argType.control) {
+      case "select":
+        return (
+            <Select className="max-w-xs w-full" label="" placeholder={`Select an ${argType.name}`}>
+            {argType.options.map((option: any) => (
+              <SelectItem key={option}>{option}</SelectItem>
+            ))}
+          </Select>
+        );
+      case "boolean":
+        return <Switch className="w-full" aria-label="Automatic updates" />
+  }
+}
 
   return (
-    <div>
-      <h2>{selectedComponent.name}</h2>
+    <div className="p-4 w-full">
+      <h2 className="text-lg font-bold mb-4 py-4">{selectedComponent.name}</h2>
       <div>
-        <div>
+        <div className="space-y-2">
           {Object.values(componentConfig?.argTypes).map((argType: any) => {
-            console.log("argType", argType);
             return (
-              <div key={argType.name}>
+              <div key={argType.name} className="py-2">
                 <div key={argType.name}>{argType.name}</div>
-                {argType.type === "select" ? (
-                  <select name={argType.name} >
-                    {argType.options.map((option: any) => {
-                      return <option value={option}>{option}</option>;
-                    })}
-                  </select>
-                ) : (
-                  <div>
-                    <input type={COMPONENT_MAP[argType.type]} />
-                  </div>
-                )}
+                {renderControlComponent(argType)}
               </div>
             );
           })}
