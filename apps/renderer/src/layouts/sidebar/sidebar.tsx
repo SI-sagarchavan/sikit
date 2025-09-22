@@ -17,7 +17,6 @@ const Sidebar = () => {
             <ul>
                {Object.values(manifest?.components || {}).map((component: any) => {
 
-                console.log("component", component)
 
                         const handleLoadComponent = () => {
                             const componentData = {

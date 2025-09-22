@@ -9,6 +9,8 @@ interface ComponentData {
 interface ComponentContextType {
   selectedComponent: ComponentData
   setSelectedComponent: (component: ComponentData) => void
+  componentArgs: any
+  setComponentArgs: (args: any) => void
 }
 
 const ComponentContext = createContext<ComponentContextType | undefined>(undefined)
@@ -26,9 +28,14 @@ export function ComponentProvider({ children }: ComponentProviderProps) {
     "config": "buttonStoryConfig"
 })
 
+const [componentArgs, setComponentArgs] = useState<any>({})
+
+
   const value: ComponentContextType = {
     selectedComponent,
     setSelectedComponent,
+    componentArgs,
+    setComponentArgs,
   }
 
   return (

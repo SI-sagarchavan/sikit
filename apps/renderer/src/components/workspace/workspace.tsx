@@ -9,7 +9,6 @@ const Workspace = () => {
 
   const componentConfig:any = window.AcmeCore[selectedComponent?.config]
 
-  console.log("====", componentConfig)
 
   const meta = {
     component: Component,
