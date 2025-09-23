@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@acme/ui";
+import { Button, buttonStoryConfig } from "@acme/ui";
 
 const meta: Meta<typeof Button> = {
   component: Button,
+  
   argTypes: {
     type: {
       control: { type: "radio" },
@@ -34,48 +35,9 @@ export const Primary: Story = {
   ),
   name: "Button",
   args: {
-   size: "md",
-   variant: "primary",
-   disabled: true,
-   type: "button",
+    ...buttonStoryConfig.args    
   },
   argTypes : {
-    size: {
-      control : "select",
-      options : ["sm", "md", "lg"],
-      description :"The size of the button",
-      name : "Size",
-      type: {
-        name : "string",
-      }
-    },
-    variant: {
-      control : "select",
-      description :"The variant of the button",
-      name : "Variant",
-      options : ["primary", "secondary", "destructive", "outline", "ghost", "link"],
-    },
-    disabled: {
-      control : "boolean",
-      description :"The disabled state of the button",
-      name : "Disabled",
-      table:{
-        defaultValue : {
-          summary : "false"
-        },
-        category:"Basic",
-        subcategory : "Disabled",
-        type : {
-          detail : "boolean",
-          summary : "false",
-        }
-      }
-    },
-    type: {
-      control : "select",
-      description :"The type of the button",
-      name : "Type",
-      options : ["button", "submit", "reset"]
-    }
+    ...buttonStoryConfig.argTypes
   }
 };

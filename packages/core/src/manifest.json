@@ -2,7 +2,7 @@
   "name": "SkyDrop Core",
   "version": "2.1.0",
   "description": "A comprehensive design system core package",
-  "generatedAt": "2025-09-22T04:45:19.675Z",
+  "generatedAt": "2025-09-23T07:16:51.773Z",
   "packages": {
     "core": {
       "name": "@acme/core",
@@ -38,7 +38,8 @@
       "name": "badge",
       "path": "./src/badge",
       "exports": [
-        "Badge"
+        "Badge",
+        "StoryConfig"
       ],
       "type": "component",
       "version": "2.1.0"
@@ -63,7 +64,7 @@
   },
   "totalComponents": 3,
   "stats": {
-    "totalExports": 3,
+    "totalExports": 4,
     "componentTypes": {
       "component": 3
     }

@@ -1,15 +1,20 @@
-import { StrictMode } from 'react' 
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import {HeroUIProvider} from "@heroui/react";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import { HeroUIProvider } from "@heroui/react";
+import "@acme/ui/styles.css";
 
-// import '@acme/ui/styles.css'
+import * as React from "react"
+import * as ReactDOM from "react-dom"
+
+window.React = React
+window.ReactDOM = ReactDOM
 
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-<HeroUIProvider>
+    <HeroUIProvider>
       <App />
-      </HeroUIProvider>
-  </StrictMode>,
-)
+    </HeroUIProvider>
+  </StrictMode>
+);

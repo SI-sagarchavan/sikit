@@ -1,10 +1,10 @@
 export const buttonStoryConfig  = {
   args: {
     size: "md",
-    variant: "primary",
-    disabled: true,
+    variant: "link",
+    disabled: false,
     type: "button",
-    children: "Hello",
+    children: "Hello world",
    },
    argTypes : {
      size: {

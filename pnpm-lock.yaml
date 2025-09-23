@@ -24,11 +24,11 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       react:
-        specifier: ^18.2.0
-        version: 18.3.1
+        specifier: ^19.1.0
+        version: 19.1.0
       react-dom:
-        specifier: ^18.2.0
-        version: 18.3.1(react@18.3.1)
+        specifier: ^19.1.0
+        version: 19.1.0(react@19.1.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -44,13 +44,13 @@ importers:
         version: 8.2.6(storybook@8.2.6)
       '@storybook/addon-links':
         specifier: ^8.2.6
-        version: 8.2.6(react@18.3.1)(storybook@8.2.6)
+        version: 8.2.6(react@19.1.0)(storybook@8.2.6)
       '@storybook/react':
         specifier: ^8.2.6
-        version: 8.2.6(react-dom@18.3.1)(react@18.3.1)(storybook@8.2.6)(typescript@5.5.4)
+        version: 8.2.6(react-dom@19.1.0)(react@19.1.0)(storybook@8.2.6)(typescript@5.5.4)
       '@storybook/react-vite':
         specifier: ^8.2.6
-        version: 8.2.6(react-dom@18.3.1)(react@18.3.1)(storybook@8.2.6)(typescript@5.5.4)(vite@5.2.11)
+        version: 8.2.6(react-dom@19.1.0)(react@19.1.0)(storybook@8.2.6)(typescript@5.5.4)(vite@5.2.11)
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.2.1(vite@5.2.11)
@@ -168,11 +168,11 @@ importers:
         specifier: ^1.7.0
         version: 1.7.0
       '@types/react':
-        specifier: ^18.2.61
-        version: 18.3.2
+        specifier: ^19.1.8
+        version: 19.1.8
       '@types/react-dom':
-        specifier: ^18.2.19
-        version: 18.3.0
+        specifier: ^19.1.6
+        version: 19.1.6(@types/react@19.1.8)
       eslint:
         specifier: ^8.57.0
         version: 8.57.1
@@ -237,11 +237,11 @@ importers:
         specifier: ^1.7.0
         version: 1.7.0
       '@types/react':
-        specifier: ^18.2.61
-        version: 18.3.2
+        specifier: ^19.1.8
+        version: 19.1.8
       '@types/react-dom':
-        specifier: ^18.2.19
-        version: 18.3.0
+        specifier: ^19.1.6
+        version: 19.1.6(@types/react@19.1.8)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -6128,7 +6128,7 @@ packages:
       storybook: 8.2.6
     dev: true
 
-  /@storybook/addon-links@8.2.6(react@18.3.1)(storybook@8.2.6):
+  /@storybook/addon-links@8.2.6(react@19.1.0)(storybook@8.2.6):
     resolution: {integrity: sha512-CUuU3nk8wyZ3bljCmOG/OCKazan+bPuNbCph8N763zyzdEx5M/CbBxV9d3pi3zjYpix7txlqrl2/YdMCejfyFw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
@@ -6139,7 +6139,7 @@ packages:
     dependencies:
       '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
-      react: 18.3.1
+      react: 19.1.0
       storybook: 8.2.6
       ts-dedent: 2.2.0
     dev: true
@@ -6379,6 +6379,18 @@ packages:
       storybook: 8.2.6
     dev: true
 
+  /@storybook/react-dom-shim@8.2.6(react-dom@19.1.0)(react@19.1.0)(storybook@8.2.6):
+    resolution: {integrity: sha512-B+x8UAEQPDp1yhN3tMh09NvSL38QNfJB7PAyLgKrfE7xIAzvewq+RLW2DfGkoZCy+Zr7QSHm1p7NOgud8+sQCg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^8.2.6
+    dependencies:
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      storybook: 8.2.6
+    dev: true
+
   /@storybook/react-dom-shim@9.1.7(react-dom@19.1.0)(react@19.1.0)(storybook@9.1.7):
     resolution: {integrity: sha512-ktjCuZ42g3TAF6nMiSdLbJu/EcvC039hYrmVltKpfF7krf+0xHkK3dCuYqSBp5nv3fS+IemrqmzJwREu5BJLuQ==}
     peerDependencies:
@@ -6391,7 +6403,7 @@ packages:
       storybook: 9.1.7(@testing-library/dom@10.4.1)(prettier@3.2.5)(vite@7.0.2)
     dev: true
 
-  /@storybook/react-vite@8.2.6(react-dom@18.3.1)(react@18.3.1)(storybook@8.2.6)(typescript@5.5.4)(vite@5.2.11):
+  /@storybook/react-vite@8.2.6(react-dom@19.1.0)(react@19.1.0)(storybook@8.2.6)(typescript@5.5.4)(vite@5.2.11):
     resolution: {integrity: sha512-BpbteaIzsJZL1QN3iR7uuslrPfdtbZYXPhcU9awpfl5pW5MOQThuvl7728mwT8V7KdANeikJPgsnlETOb/afDA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
@@ -6403,12 +6415,12 @@ packages:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.2.11)
       '@rollup/pluginutils': 5.1.0
       '@storybook/builder-vite': 8.2.6(storybook@8.2.6)(typescript@5.5.4)(vite@5.2.11)
-      '@storybook/react': 8.2.6(react-dom@18.3.1)(react@18.3.1)(storybook@8.2.6)(typescript@5.5.4)
+      '@storybook/react': 8.2.6(react-dom@19.1.0)(react@19.1.0)(storybook@8.2.6)(typescript@5.5.4)
       find-up: 5.0.0
       magic-string: 0.30.10
-      react: 18.3.1
+      react: 19.1.0
       react-docgen: 7.0.3
-      react-dom: 18.3.1(react@18.3.1)
+      react-dom: 19.1.0(react@19.1.0)
       resolve: 1.22.8
       storybook: 8.2.6
       tsconfig-paths: 4.2.0
@@ -6449,7 +6461,7 @@ packages:
       - typescript
     dev: true
 
-  /@storybook/react@8.2.6(react-dom@18.3.1)(react@18.3.1)(storybook@8.2.6)(typescript@5.5.4):
+  /@storybook/react@8.2.6(react-dom@19.1.0)(react@19.1.0)(storybook@8.2.6)(typescript@5.5.4):
     resolution: {integrity: sha512-awJlzfiAMrf8l9AgiLhjXEJ+HvS3VKPxNNQaRwBELGq/vigjJe656tMrhvg4OIlJXtlS+6XPshd2knLwjIWNLw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
@@ -6465,7 +6477,7 @@ packages:
       '@storybook/global': 5.0.0
       '@storybook/manager-api': 8.2.6(storybook@8.2.6)
       '@storybook/preview-api': 8.2.6(storybook@8.2.6)
-      '@storybook/react-dom-shim': 8.2.6(react-dom@18.3.1)(react@18.3.1)(storybook@8.2.6)
+      '@storybook/react-dom-shim': 8.2.6(react-dom@19.1.0)(react@19.1.0)(storybook@8.2.6)
       '@storybook/theming': 8.2.6(storybook@8.2.6)
       '@types/escodegen': 0.0.6
       '@types/estree': 0.0.51
@@ -6477,9 +6489,9 @@ packages:
       html-tags: 3.3.1
       lodash: 4.17.21
       prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-element-to-jsx-string: 15.0.0(react-dom@18.3.1)(react@18.3.1)
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      react-element-to-jsx-string: 15.0.0(react-dom@19.1.0)(react@19.1.0)
       semver: 7.6.2
       storybook: 8.2.6
       ts-dedent: 2.2.0
@@ -6967,12 +6979,6 @@ packages:
 
   /@types/range-parser@1.2.7:
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
-    dev: true
-
-  /@types/react-dom@18.3.0:
-    resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
-    dependencies:
-      '@types/react': 19.1.8
     dev: true
 
   /@types/react-dom@19.1.6(@types/react@19.1.8):
@@ -10849,6 +10855,7 @@ packages:
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    dev: true
 
   /js-yaml@3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
@@ -11226,6 +11233,7 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: true
 
   /loupe@3.2.1:
     resolution: {integrity: sha512-CdzqowRJCeLU72bHvWqwRBBlLcMEtIvGrlvef74kMnV2AolS9Y8xUv1I0U/MNAWMhBlKIoyuEgoJ0t/bbwHbLQ==}
@@ -12669,6 +12677,7 @@ packages:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
+    dev: true
 
   /react-dom@19.1.0(react@19.1.0):
     resolution: {integrity: sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==}
@@ -12678,7 +12687,7 @@ packages:
       react: 19.1.0
       scheduler: 0.26.0
 
-  /react-element-to-jsx-string@15.0.0(react-dom@18.3.1)(react@18.3.1):
+  /react-element-to-jsx-string@15.0.0(react-dom@19.1.0)(react@19.1.0):
     resolution: {integrity: sha512-UDg4lXB6BzlobN60P8fHWVPX3Kyw8ORrTeBtClmIlGdkOOE+GYQSFvmEU5iLLpwp/6v42DINwNcwOhOLfQ//FQ==}
     peerDependencies:
       react: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0
@@ -12686,8 +12695,8 @@ packages:
     dependencies:
       '@base2/pretty-print-object': 1.0.1
       is-plain-object: 5.0.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
       react-is: 18.1.0
     dev: true
 
@@ -12732,6 +12741,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: true
 
   /react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
@@ -13126,6 +13136,7 @@ packages:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
     dependencies:
       loose-envify: 1.4.0
+    dev: true
 
   /scheduler@0.26.0:
     resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}

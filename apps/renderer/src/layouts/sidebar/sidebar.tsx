@@ -9,6 +9,7 @@ const Sidebar = () => {
         setManifest(window.AcmeCore.manifest);
     }, [window.AcmeCore]);
 
+
   return (
     <div className="p-4">
         <div>
@@ -22,7 +23,7 @@ const Sidebar = () => {
                             const componentData = {
                                 name: component.name,
                                 exports: component.exports,
-                                config: component.config
+                                config: `${component.name}StoryConfig`
                             }
                             setSelectedComponent(componentData)
                         }

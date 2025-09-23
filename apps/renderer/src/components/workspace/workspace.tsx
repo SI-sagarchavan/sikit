@@ -1,40 +1,32 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-
 import { useComponent } from "../../contexts/component-context"
 
 const Workspace = () => {
   const { selectedComponent } = useComponent()
 
-  const Component = window.AcmeCore[selectedComponent.exports[0]]
+  if (!selectedComponent) {
+    return (
+      <div className="flex items-center justify-center h-full text-gray-500">
+        No component selected
+      </div>
+    )
+  }
 
-  const componentConfig:any = window.AcmeCore[selectedComponent?.config]
+  const Component = window.AcmeCore?.[selectedComponent.exports?.[0]]
+  const componentConfig: any = window.AcmeCore?.[selectedComponent.config]
 
-  const meta = {
-    component: Component,
-  } satisfies Meta<typeof Component>;
-  
-  type Story = StoryObj<typeof meta>;
-
-   const Story: Story = {
-    render : (props) => {
-       return <Component {...props} >{props.children}</Component>
-    },
-    name : selectedComponent.name,
-    args : {
-       ...componentConfig.args,
-    },
-    argTypes:{
-      ...componentConfig.argTypes,
-      },
-    }
-
-    const { render: renderComponent, args } = Story
+  if (!Component) {
+    return (
+      <div className="flex items-center justify-center h-full text-red-500">
+        Component not found in window.AcmeCore
+      </div>
+    )
+  }
 
   return (
-    <div className=''>
-      {renderComponent && renderComponent(args || {}, {} as any)}
-    </div>
-  ) 
+    <Component {...(componentConfig?.args || {})}>
+      {componentConfig?.args?.children}
+    </Component>
+  )
 }
 
 export default Workspace

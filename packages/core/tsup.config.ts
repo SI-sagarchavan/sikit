@@ -13,5 +13,6 @@ export default defineConfig((options) => ({
       js: `/* ${figlet.textSync("SkyDrop Core")} */`
     };
   },
+  external: ["react", "react-dom"],
   ...options,
 })); 
