@@ -6,7 +6,7 @@ export const badgeStoryConfig = {
         variant: {
             control: "select",
             name: "Variant",
-            options: ["primary", "secondary", "outline", "ghost"],
+            options: ["primary", "secondary", "outline"],
         },
     },
 }

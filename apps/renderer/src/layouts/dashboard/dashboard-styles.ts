@@ -6,6 +6,6 @@ export const dashboardStyles = tv({
         sidebarContainer: "col-span-2 w-full",
         configPanelContainer: "col-span-3",
         mainContainer: "col-span-7",
-        workspaceContainer: "h-screen flex items-center justify-center bg-gray-100",
+        workspaceContainer: "h-screen flex items-center justify-center bg-gray-700",
     }
 });

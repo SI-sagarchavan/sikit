@@ -29,7 +29,6 @@ type Story = StoryObj<typeof Badge>;
  console.log(badgeStoryConfig);
 
 export const Primary: Story = {
-    
 
   render: (props) => (
     <Badge {...props} />

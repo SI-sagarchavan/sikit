@@ -1,7 +1,7 @@
 import { useComponent } from "../../contexts/component-context"
 
 const Workspace = () => {
-  const { selectedComponent } = useComponent()
+  const { selectedComponent, componentArgs } = useComponent()
 
   if (!selectedComponent) {
     return (
@@ -14,6 +14,8 @@ const Workspace = () => {
   const Component = window.AcmeCore?.[selectedComponent.exports?.[0]]
   const componentConfig: any = window.AcmeCore?.[selectedComponent.config]
 
+  console.log("componentConfig" ,componentArgs);
+  
   if (!Component) {
     return (
       <div className="flex items-center justify-center h-full text-red-500">
@@ -23,7 +25,7 @@ const Workspace = () => {
   }
 
   return (
-    <Component {...(componentConfig?.args || {})}>
+    <Component {...(componentArgs || {})}>
       {componentConfig?.args?.children}
     </Component>
   )

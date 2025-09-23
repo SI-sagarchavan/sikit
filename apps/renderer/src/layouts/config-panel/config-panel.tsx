@@ -1,35 +1,28 @@
-import {Switch} from "@heroui/switch";
-import {Select, SelectItem} from "@heroui/react";
 
 import { useComponent } from "../../contexts/component-context";
-import { useState } from "react";
 
 const ConfigPanel = () => {
-  const { selectedComponent } = useComponent();
+  const { selectedComponent, componentArgs, setComponentArgs } = useComponent();
 
   const componentConfig: any = window.AcmeCore[selectedComponent.config];
 
-  const [args, setArgs] = useState<any | null>(null);
-
   const handleFormValueChange = (name: string, value: any) => {
-    setArgs({ ...args, [name]: value });
+    setComponentArgs({ ...componentArgs, [name.toLowerCase()]: value });
   };
-
-  console.log(args);
-
   const renderControlComponent = (argType: any) => {
-    console.log(argType);
+
     switch (argType.control) {
       case "select":
         return (
-            <Select value={args?.[argType?.name]} onChange={(value) => handleFormValueChange(argType.name, value)} className="max-w-xs w-full" placeholder={`Select an ${argType.name}`}>
+            <select defaultValue="Pick a color" className="select" onChange={(e) => handleFormValueChange(argType.name, e.target.value)}>
+                 <option disabled={true}>Pick a color</option>
             {argType.options.map((option: any, idx:number) => (
-              <SelectItem  key={option + idx}>{option}</SelectItem>
+                <option key={option + idx}>{option}</option>
             ))}
-          </Select>
+          </select>
         );
       case "boolean":
-        return <Switch className="w-full" aria-label="Automatic updates" />
+        return <input type="checkbox" defaultChecked className="toggle" onChange={(e) => handleFormValueChange(argType.name, e.target.checked)} />
   }
 }
 

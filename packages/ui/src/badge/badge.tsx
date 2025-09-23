@@ -7,7 +7,7 @@ export const badgeStoryConfig = {
     argTypes: {
         variant: {
             control: "select",
-            options: ["primary", "secondary", "destructive", "outline", "ghost", "link"],
+            options: ["primary", "secondary", "outline"],
         },
     },
 }
@@ -19,7 +19,6 @@ const badgeStyles = tv({
             primary: "bg-primary text-primary-foreground hover:bg-primary/90",
             secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90",
             outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-            ghost: "hover:bg-accent hover:text-accent-foreground",
         },
     },
 })

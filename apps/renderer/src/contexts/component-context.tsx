@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, type ReactNode } from 'react'
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 
 interface ComponentData {
   name: string
@@ -20,15 +20,22 @@ interface ComponentProviderProps {
 }
 
 export function ComponentProvider({ children }: ComponentProviderProps) {
-  const [selectedComponent, setSelectedComponent] = useState<ComponentData>({
+
+  const args = {
     "name": "button",
     "exports": [
         "Button"
     ],
     "config": "buttonStoryConfig"
+  }
+
+  const argTypes = {...window.AcmeCore.manifest}
+
+  const [selectedComponent, setSelectedComponent] = useState<ComponentData>({
+    ...args
 })
 
-const [componentArgs, setComponentArgs] = useState<any>({})
+const [componentArgs, setComponentArgs] = useState<any | null>(null)
 
 
   const value: ComponentContextType = {

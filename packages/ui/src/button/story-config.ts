@@ -30,7 +30,7 @@ export const buttonStoryConfig  = {
          defaultValue : {
            summary : "false"
          },
-         category:"Basic",
+         category:"Hover",
          subcategory : "Disabled",
          type : {
            detail : "boolean",

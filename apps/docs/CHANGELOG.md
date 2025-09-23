@@ -1,5 +1,12 @@
 # docs
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @acme/ui@3.0.0
+
 ## 1.0.2
 
 ### Patch Changes

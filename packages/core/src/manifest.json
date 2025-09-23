@@ -1,30 +1,21 @@
 {
   "name": "SkyDrop Core",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "A comprehensive design system core package",
-  "generatedAt": "2025-09-23T07:16:51.773Z",
+  "generatedAt": "2025-09-23T10:26:09.759Z",
   "packages": {
     "core": {
       "name": "@acme/core",
-      "version": "2.1.0",
+      "version": "3.0.0",
       "description": "Core package that re-exports UI components"
     },
     "ui": {
       "name": "@acme/ui",
-      "version": "2.1.0",
+      "version": "3.0.0",
       "description": "UI component library"
     }
   },
   "components": {
-    "calendar": {
-      "name": "calendar",
-      "path": "./src/calendar",
-      "exports": [
-        "Calendar"
-      ],
-      "type": "component",
-      "version": "2.1.0"
-    },
     "button": {
       "name": "button",
       "path": "./src/button",
@@ -32,7 +23,7 @@
         "Button"
       ],
       "type": "component",
-      "version": "2.1.0"
+      "version": "3.0.0"
     },
     "badge": {
       "name": "badge",
@@ -42,7 +33,7 @@
         "StoryConfig"
       ],
       "type": "component",
-      "version": "2.1.0"
+      "version": "3.0.0"
     }
   },
   "dependencies": {
@@ -62,11 +53,11 @@
       "tailwind-variants": "^3.1.1"
     }
   },
-  "totalComponents": 3,
+  "totalComponents": 2,
   "stats": {
-    "totalExports": 4,
+    "totalExports": 3,
     "componentTypes": {
-      "component": 3
+      "component": 2
     }
   }
 }
