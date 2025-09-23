@@ -1,4 +1,9 @@
-export const buttonStoryConfig  = {
+import type { StoryObj } from "@storybook/react";
+import { Button } from "./button";
+
+export type Story = StoryObj<typeof Button>;
+
+export const buttonStoryConfig: Story = {
   args: {
     size: "md",
     variant: "link",
@@ -31,7 +36,6 @@ export const buttonStoryConfig  = {
            summary : "false"
          },
          category:"Hover",
-         subcategory : "Disabled",
          type : {
            detail : "boolean",
            summary : "false",

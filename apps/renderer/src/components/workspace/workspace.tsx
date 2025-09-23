@@ -1,4 +1,6 @@
+import React from "react"
 import { useComponent } from "../../contexts/component-context"
+import { Button } from "@acme/ui"
 
 const Workspace = () => {
   const { selectedComponent, componentArgs } = useComponent()
@@ -25,7 +27,8 @@ const Workspace = () => {
   }
 
   return (
-    <Component {...(componentArgs || {})}>
+   
+    <Component  {...(componentArgs || {})}>
       {componentConfig?.args?.children}
     </Component>
   )
