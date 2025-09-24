@@ -2,7 +2,7 @@
   "name": "SkyDrop Core",
   "version": "3.0.0",
   "description": "A comprehensive design system core package",
-  "generatedAt": "2025-09-23T10:54:42.194Z",
+  "generatedAt": "2025-09-24T03:50:30.973Z",
   "packages": {
     "core": {
       "name": "@acme/core",

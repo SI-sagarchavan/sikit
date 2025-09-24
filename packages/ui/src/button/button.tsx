@@ -1,14 +1,14 @@
 import { buttonStyles } from './button-styles'
 import { ButtonProps } from './types';
 
-const Button = ({ variant, children, ...props }: ButtonProps) => {
+const Button = ({ variant, size, disabled, children, ...props }: ButtonProps) => {
 
-const styles = buttonStyles({variant});
+const styles = buttonStyles({ variant, size, disabled });
 
   return (
-    <div className={styles}>
-        <button {...props}>{children}</button>
-    </div>
+    <button className={styles} disabled={disabled} {...props}>
+      {children}
+    </button>
   )
 }
 

@@ -14,8 +14,8 @@ const ConfigPanel = () => {
     switch (argType.control) {
       case "select":
         return (
-            <select defaultValue="Pick a color" className="select" onChange={(e) => handleFormValueChange(argType.name, e.target.value)}>
-                 <option disabled={true}>Pick a color</option>
+            <select defaultValue={`Choose a ${argType.name}`} className="select" onChange={(e) => handleFormValueChange(argType.name, e.target.value)}>
+                 <option disabled={true}>Choose a {argType.name}</option>
             {argType.options.map((option: any, idx:number) => (
                 <option key={option + idx}>{option}</option>
             ))}

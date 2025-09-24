@@ -1,5 +1,5 @@
 import type { StoryObj } from "@storybook/react";
-import { Button } from "./button";
+import { Button } from "./index";
 
 export type Story = StoryObj<typeof Button>;
 
@@ -33,7 +33,7 @@ export const buttonStoryConfig: Story = {
        name : "Disabled",
        table:{
          defaultValue : {
-           summary : "false"
+           summary : "false",
          },
          category:"Hover",
          type : {
